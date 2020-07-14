@@ -108,10 +108,10 @@ function drawTriangle(p0, p1, p2) {
 
 function runOnScroll(e) {
   console.log(e)
-  if (e.deltaY == -100) {
+  if (e.deltaY < 0) {
     zoom = 1.1;
     rescale(e.pageX - width/2, e.pageY - height/2);
-  } else if (e.deltaY == 100) {
+  } else if (e.deltaY > 0) {
     zoom = 9/12;
     rescale(e.pageX - width/2, e.pageY - height/2);
   }
